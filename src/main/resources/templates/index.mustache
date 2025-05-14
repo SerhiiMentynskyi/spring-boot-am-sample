@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>Тлумачний словник</title></head>
+<body>
+  <h1>Тлумачний словник комп'ютерних термінів</h1>
+  <form action="/" method="get">
+    <input type="text" name="q" placeholder="Пошук..."/>
+    <button type="submit">Шукати</button>
+  </form>
+  <a href="/add">Додати термін</a>
+  <ul>
+    {{#terms}}
+      <li><b>{{term}}</b>: {{definition}}</li>
+    {{/terms}}
+  </ul>
+</body>
+</html>
