@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="uk">
+{{> partials/head}}
+<body class="bg-light">
+{{> partials/navbar }}
+  <div class="container py-4">
+    <h2>Додати новий термін</h2>
+    <form action="/terms/add" method="post" class="mt-3">
+      <div class="mb-3">
+        <label class="form-label">Термін</label>
+        <input name="term" type="text" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Визначення</label>
+        <textarea name="definition" class="form-control" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-success">Зберегти</button>
+      <a href="/terms/" class="btn btn-secondary">Скасувати</a>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,17 +1,12 @@
 <!DOCTYPE html>
-<html>
-<head><title>Тлумачний словник</title></head>
-<body>
-  <h1>Тлумачний словник комп'ютерних термінів</h1>
-  <form action="/" method="get">
-    <input type="text" name="q" placeholder="Пошук..."/>
-    <button type="submit">Шукати</button>
-  </form>
-  <a href="/add">Додати термін</a>
-  <ul>
-    {{#terms}}
-      <li><b>{{term}}</b>: {{definition}}</li>
-    {{/terms}}
-  </ul>
+<html lang="uk">
+{{> partials/head}}
+<body class="bg-light">
+{{> partials/navbar }}
+  <div class="container py-5">
+    <h1>Тлумачний словник комп'ютерних термінів</h1>
+    <p class="lead">Цей словник містить найпоширеніші терміни у сфері ІТ та програмування.</p>
+    <a href="/terms/" class="btn btn-primary">Переглянути терміни</a>
+  </div>
 </body>
 </html>

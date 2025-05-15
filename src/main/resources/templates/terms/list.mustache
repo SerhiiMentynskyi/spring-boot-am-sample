@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="uk">
+{{> partials/head}}
+<body class="bg-light">
+{{> partials/navbar }}
+  <div class="container py-4">
+    <h1 class="mb-4">Словник термінів</h1>
+
+    <ul class="list-group">
+      {{#terms}}
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <div>
+            <a href="/terms/{{id}}" class="fw-bold">{{term}}</a>
+          </div>
+          <div>
+            <a href="/terms/{{id}}/edit" class="btn btn-sm btn-outline-secondary">Редагувати</a>
+            <a href="/terms/{{id}}/delete" class="btn btn-sm btn-outline-danger">Видалити</a>
+          </div>
+        </li>
+      {{/terms}}
+    </ul>
+  </div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="uk">
+{{> partials/head}}
+<body class="bg-light">
+  <div class="container py-4">
+    <h2>Видалити термін</h2>
+    <div class="alert alert-warning">
+      Ви впевнені, що хочете видалити <strong>{{termDef}}</strong>?
+    </div>
+    <form action="/terms/{{id}}/delete" method="post">
+      <button type="submit" class="btn btn-danger">Так, видалити</button>
+      <a href="/terms/" class="btn btn-secondary">Скасувати</a>
+    </form>
+  </div>
+</body>
+</html>

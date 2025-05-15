@@ -2,6 +2,7 @@ package net.starbasic.am.dic.data;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 
 @Service
 public class TermService {
@@ -22,4 +23,14 @@ public class TermService {
     public List<Term> search(String keyword) {
         return repository.findByTermContainingIgnoreCase(keyword);
     }
+
+
+    public Term getTermById(Long id) {
+        return repository.findById(id).orElseThrow(() -> new NoSuchElementException("Not found"));
+    }
+
+    public void deleteById(Long id) {
+        repository.deleteById(id);
+    }
+
 }
