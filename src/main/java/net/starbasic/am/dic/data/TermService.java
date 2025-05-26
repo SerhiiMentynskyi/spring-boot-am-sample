@@ -3,6 +3,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.Optional;
 
 @Service
 public class TermService {
@@ -26,6 +27,7 @@ public class TermService {
 
 
     public Term getTermById(Long id) {
+        Optional<Term> t = repository.findById(id);
         return repository.findById(id).orElseThrow(() -> new NoSuchElementException("Not found"));
     }
 
